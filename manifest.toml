@@ -14,7 +14,7 @@ maintainers = ["johndoe"]
 [upstream]
 license = "AGPL-3.0-only"
 website = "https://www.docuseal.co/"
-demo = "https://demo.example.com"
+demo = "https://demo.docuseal.co/"
 admindoc = "https://yunohost.org/packaging_apps"
 userdoc = "https://yunohost.org/apps"
 code = "https://github.com/docusealco/docuseal"
@@ -41,8 +41,6 @@ ram.runtime = "50M"
     default = "/example"
 
     [install.init_main_permission]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    # This won't be saved as setting and will instead be used to initialize the SSOwat permission
     type = "group"
     default = "visitors"
 
