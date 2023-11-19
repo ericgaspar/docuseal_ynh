@@ -55,6 +55,17 @@ chmod 400 "$install_dir/.env"
 chown $app:$app "$install_dir/.env"
 
 #=================================================
+# INSTALL DOCUSEAL
+#=================================================
+ynh_script_progression --message="Installing $app..." --weight=10
+
+pushd $install_dir
+ 	ynh_use_nodejs
+	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH yarn install
+	ynh_exec_warn_less sudo -u $app env $ynh_node_load_PATH NODE_ENV=production yarn build
+popd
+
+#=================================================
 # GENERIC FINALIZATION
 #=================================================
 # START SYSTEMD SERVICE
