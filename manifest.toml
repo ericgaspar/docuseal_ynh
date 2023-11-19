@@ -81,7 +81,7 @@ ram.runtime = "50M"
     [resources.ports]
 
     [resources.apt]
-    packages = "deb1, deb2, php8.0-foo, php8.0-bar"
+    packages = "postgresql"
 
     [resources.database]
-    type = "mysql"
+    type = "postgresql"
